@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@formatjs/intl-localematcher': ^0.5.4
   '@prisma/client': 5.14.0
+  '@vercel/kv': ^2.0.0
   dayjs: ^1.11.11
   eslint: ^8
   eslint-config-next: 14.2.3
@@ -24,6 +25,7 @@ specifiers:
 dependencies:
   '@formatjs/intl-localematcher': 0.5.4
   '@prisma/client': 5.14.0_prisma@5.14.0
+  '@vercel/kv': 2.0.0
   dayjs: 1.11.11
   i18next: 23.11.4
   i18next-resources-to-backend: 1.2.1
@@ -379,6 +381,19 @@ packages:
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
     dev: true
 
+  /@upstash/redis/1.31.5:
+    resolution: {integrity: sha512-2MatqeqftroSJ9Q+pqbyGAIwXX6KEPtUTUna2c/fq09h12ffwvltDTgfppeF+NzJo/SyZfHY8e1RoflduMbz1A==}
+    dependencies:
+      crypto-js: 4.2.0
+    dev: false
+
+  /@vercel/kv/2.0.0:
+    resolution: {integrity: sha512-zdVrhbzZBYo5d1Hfn4bKtqCeKf0FuzW8rSHauzQVMUgv1+1JOwof2mWcBuI+YMJy8s0G0oqAUfQ7HgUDzb8EbA==}
+    engines: {node: '>=14.6'}
+    dependencies:
+      '@upstash/redis': 1.31.5
+    dev: false
+
   /acorn-jsx/5.3.2_acorn@8.11.3:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -649,6 +664,10 @@ packages:
       shebang-command: 2.0.0
       which: 2.0.2
     dev: true
+
+  /crypto-js/4.2.0:
+    resolution: {integrity: sha512-KALDyEYgpY+Rlob/iriUtjV6d5Eq+Y191A5g4UqLAi8CyGP9N1+FdVbkc1SxKc2r4YAYqG8JzO2KGL+AizD70Q==}
+    dev: false
 
   /damerau-levenshtein/1.0.8:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}

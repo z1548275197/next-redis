@@ -17,7 +17,7 @@ export default async function NoteList() {
   return (
     <SidebarNoteListFilter>
       {Object.entries(notes).map(([noteId, note]) => {
-        return <SidebarNoteItem noteId={noteId} note={JSON.parse(note)} />
+        return <SidebarNoteItem key={noteId} noteId={noteId} note={JSON.parse(note)} />
       })}
     </SidebarNoteListFilter>
   )

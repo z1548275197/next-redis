@@ -1,0 +1,99 @@
+# 飞冰
+
+## 一.路由
+
+ 1.路由配置
+
+```
+{
+
+​    path: '/user',
+
+​    component: UserLayout,
+
+​    children: [
+
+​      {
+
+​        *// 路由路径*
+
+​        path: '/login',
+
+​        *// 精确匹配*
+
+​        exact: true,
+
+​        *// 路由组件*
+
+​        component: UserLogin,
+
+​        *// 配置路由的高阶组件*
+
+​        wrappers: [wrapperPage],
+
+​      },
+
+​      {
+
+​        path: '/',
+
+​        *// 重定向*
+
+​        redirect: '/user/login',
+
+​      },
+
+​      {
+
+​        *// 404 没有匹配到的路由*
+
+​        component: NotFound,
+
+​      },
+
+​    ],
+
+  },
+```
+
+2.路由跳转
+
+```
+import { Link, useHistory } from 'ice';
+
+function Home() {
+  const history = useHistory();
+  return (
+    <>
+      <Link to="/about">去 about 页面</Link>
+      <span
+        onClick={() => {
+          history.push('/about');
+        }}
+      >
+        去 about 页面
+      </span>
+    </>
+  );
+}
+```
+
+3.路由传参：
+
+Url params. 
+
+/projects/:id   动态路由
+
+state参数（参数获取：可以通过location中获取到参数）
+
+## 二、 ahooks
+
+useSetState 
+
+和useState用法一样
+
+
+
+Mock.js
+
+Mock.ts

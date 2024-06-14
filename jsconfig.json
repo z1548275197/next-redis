@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/actions": [
+        "app/[lng]/actions.js"
+      ],
+      "@/*": [
+        "/*"
+      ]
+    }
+  }
+}
